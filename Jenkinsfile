@@ -12,7 +12,7 @@ pipeline {
         sh 'docker images'
       }
     }
-    stage ('Build the docker image') {
+    stage ('Push the docker image') {
       steps {
         sh 'docker push mniligiri/firstrepo:v10'
         }
