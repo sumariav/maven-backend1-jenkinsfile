@@ -6,5 +6,11 @@ pipeline {
         sh 'mvn install'
       }
     }
+    stage ('Build the docker image') {
+      steps {
+        sh 'docker build -t mniligiri/firstrepo:v10 .'
+        sh 'docker images'
+      }
+    }
   }
 }
